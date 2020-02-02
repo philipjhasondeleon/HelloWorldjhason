@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //DISPLAY ARRAY
+        //DISPLAY ARRAY======================================
         /*
         String [] cars = {"toyoya","asdasd"};
         System.out.println(cars.length);
@@ -18,25 +18,25 @@ public class Main {
         */
 
 
-        //CASTING
+        //CASTING=================================
         /*
         double x = 1.1;
         int y = (int)x + 2;
         System.out.println(y);
 
-        //String to int
+        //String to int===========================
         String x = "11";
         int y = Integer.parseInt(x) + 2;
         System.out.println(y);
          */
 
-        //MATH
+        //MATH===================================
         /*
         int result = (int) (Math.random() *100);  //need to cast because Math.random must be double
         System.out.println(result);               //min(),max(), round()
          */
 
-        //FORMATTING NUMBERS
+        //FORMATTING NUMBERS=====================
         /*
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         String result = currency.format(1234567.891);
@@ -48,7 +48,7 @@ public class Main {
         System.out.println(result);
         */
 
-        //READING INPUT
+        //READING INPUT================================
         /*
         Scanner scanner = new Scanner(System.in);
         System.out.print("Name: ");
@@ -56,7 +56,7 @@ public class Main {
         System.out.println("You are:" + name);
          */
 
-        //Mortgage calculator
+        //MORTGAGE CALCULATOR================================
         /*
         final byte MONTHS_IN_YEAR = 12;
         final byte PERCENT = 100;
@@ -81,7 +81,64 @@ public class Main {
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(123115132);
         System.out.println("Mortgage: " + mortgageFormatted);
          */
-//
+
+        //IF STATEMENT==================================
+        /*
+        int temp = 23;
+        if (temp > 30){
+            System.out.println("It's a hot day");
+            System.out.println("Drink Water");
+        }
+        else if (temp >20)
+            System.out.println("Beautiful Day");
+        else
+            System.out.println("Cold Day");
+        */
+
+
+        /*
+        int income = 120_000;
+        boolean hasHighIncome;
+        if (income > 100_000)
+            hasHighIncome = true;
+        else
+            hasHighIncome = false;
+        System.out.println(hasHighIncome);
+        */
+                //OR
+        /*
+        int income = 120_000;
+        boolean hasHighIncome = (income > 100_000);
+        System.out.println(hasHighIncome);
+         */
+
+        //TERNARY OPERATOR =======================================
+        /*
+        int income = 120_000;
+        String className = income > 100_000 ? "First" : "Economy";
+        System.out.println(className);
+        */
+
+
+        //PRACTICE FIZZBUZZ
+        /*
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Number: ");
+        int number = scanner.nextInt();
+
+        if(number % 5 == 0 && number % 3 == 0 )
+            System.out.println("FizzBuzz");
+        else if(number %5 == 0)
+            System.out.println("Fizz");
+        else if(number % 3 == 0)
+            System.out.println("Buzz");
+        else
+            System.out.println(number);
+         */
+
+
+
     }
+
 
 }
