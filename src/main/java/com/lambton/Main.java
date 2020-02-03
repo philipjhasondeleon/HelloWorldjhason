@@ -120,7 +120,7 @@ public class Main {
         */
 
 
-        //PRACTICE FIZZBUZZ
+        //PRACTICE FIZZBUZZ=======================================
         /*
         Scanner scanner = new Scanner(System.in);
         System.out.print("Number: ");
@@ -136,9 +136,105 @@ public class Main {
             System.out.println(number);
          */
 
+        //FOR LOOPS ======================================================
+        /*
+        for (int i = 0; i<5; i++)
+            System.out.println("Hello World" + i);
+        */
+
+        //WHILE LOOP =======================================================
+        /*
+        int i = 0;
+        while (i<5)
+        {
+            System.out.println("Hello World");
+            i++;
+        }
+         */
 
 
+        //WHILE LOOP TILL GET THE VALUE
+        /*
+        Scanner scanner = new Scanner (System.in);
+        String input = "";
+        while(!input.equals("quit"));
+        {
+            System.out.print("input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }
+        */
+
+        //DO-WHILE LOOP========================
+        /*
+        Scanner scanner = new Scanner (System.in);
+        String input = "";
+        do{
+            System.out.print("input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        }while(!input.equals("quit"));
+        */
+
+
+        //FOR EACH LOOP ====================================
+        /*
+        String [] fruits = {"Mango", "Orange", "Apple"};
+
+        for (int i = 0; i < fruits.length ; i++)    //for loop
+            System.out.println(fruits[i]);
+
+        for(String fruit : fruits)                  //for each loop
+            System.out.println(fruit);
+        */
+
+
+        //MORTGAGE CALCULATOR WITH BASIC
+        final byte MONTHS_IN_YEAR = 12;
+        final byte PERCENT = 100;
+
+        int principal = 0;
+        float monthlyInterest = 0;
+        int numberOfPayments = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Principal: ");
+            principal = scanner.nextInt();
+            if(principal >= 1000 && principal <= 1_000_000)
+                break;
+            System.out.println("Enter Value between 1000 and 1000000");
+        }
+
+        while(true) {
+            System.out.print("Annual Interest Rate: ");
+            float annualInterest = scanner.nextFloat();
+            if (annualInterest >= 1 && annualInterest <= 30) {
+                monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+                break;
+            }
+            System.out.println("Enter value between 1 and 30:");
+        }
+
+        while (true) {
+            System.out.print("Period (Years): ");
+            byte years = scanner.nextByte();
+            if (years >= 1 && years <= 30) {
+                numberOfPayments = years * MONTHS_IN_YEAR;
+                break;
+            }
+            System.out.println("Enter value between 1 and 30: ");
+        }
+
+        double mortgage = principal
+                * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
+                / (Math.pow(1 +monthlyInterest, numberOfPayments) - 1);
+
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(123115132);
+        System.out.println("Mortgage: " + mortgageFormatted);
     }
+
+
 
 
 }
